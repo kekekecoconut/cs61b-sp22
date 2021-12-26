@@ -21,7 +21,6 @@ public class ArrayDeque<T> {
             resizeL((int) (capacity * 1.5));
             nextFirst=(int) (capacity * 1.5 - 1 - (capacity - (nextFirst + 1)));
             capacity=(int) (capacity * 1.5);
-        //    System.out.println("nextFirst:"+nextFirst);
         }
 
         items[nextFirst] = item;
@@ -42,7 +41,6 @@ public class ArrayDeque<T> {
             resizeL((int) (capacity * 1.5));
             nextFirst=(int) (capacity * 1.5 - 1 -(capacity - (nextFirst + 1)));
             capacity=(int) (capacity * 1.5);
-        //    System.out.println("nextFirst:"+nextFirst);
         }
 
         items[nextLast] = item;
@@ -70,9 +68,7 @@ public class ArrayDeque<T> {
 
     public T removeFirst(){
 
-    //    System.out.println("nextFirst0:"+nextFirst);
         nextFirst = (nextFirst == capacity - 1) ? 0 : nextFirst + 1;
-    //    System.out.println("nextFirst:"+nextFirst);
 
         T temp = items[nextFirst];
         items[nextFirst] = null;
