@@ -6,6 +6,9 @@ public class Flik {
      *  @param b Value 2
      *  @return Whether a and b are the same */
     public static boolean isSameNumber(Integer a, Integer b) {
-        return a == b;
+        if(a.intValue()==b.intValue())
+            return true;
+
+        return false;
     }
 }
