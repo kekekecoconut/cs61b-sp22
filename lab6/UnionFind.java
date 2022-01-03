@@ -13,11 +13,7 @@ public class UnionFind {
         }
     }
 
- /*   public void printParent(){
-        for (int i = 0; i < parent.length; i++) {
-            System.out.println(i+":"+parent[i]);
-        }
-    }*/
+ 
 
     /* Throws an exception if v1 is not a valid vertex. */
     private void validate(int v1) {
