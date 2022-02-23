@@ -24,13 +24,14 @@ public class TestMyHashMap {
         MyHashMap<String, Integer> b = new MyHashMap<String, Integer>();
         for (int i = 0; i < 455; i++) {
             b.put("hi" + i, 1);
-            //make sure put is working via containsKey and get
+
             assertTrue(null != b.get("hi" + i)
                     && b.containsKey("hi" + i));
         }
         b.clear();
         assertEquals(0, b.size());
         for (int i = 0; i < 455; i++) {
+
             assertTrue(null == b.get("hi" + i) && !b.containsKey("hi" + i));
         }
     }
@@ -74,6 +75,7 @@ public class TestMyHashMap {
     public void sanityPutTest() {
         MyHashMap<String, Integer> b = new MyHashMap<String, Integer>();
         b.put("hi", 1);
+        System.out.println("bget"+b.get("hi"));
         assertTrue(b.containsKey("hi") && b.get("hi") != null);
     }
 
